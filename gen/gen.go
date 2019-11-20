@@ -75,7 +75,16 @@ func (g *Gen) Build(config *Config) error {
 		return err
 	}
 	swagger := p.GetSwagger()
-
+	//李奇峰添加====开始
+	parms:=os.Args
+	log.Println("swag运行参数",parms)
+	if len(parms) >=3 {
+		swagger.Info.Title=parms[2]+swagger.Info.Title
+		log.Println("new swagger.Info.Title:",swagger.Info.Title)
+	}else{
+		log.Println("swagger.Info.Title:",swagger.Info.Title)
+	}
+	//李奇峰添加====结束
 	b, err := g.jsonIndent(swagger)
 	if err != nil {
 		return err
