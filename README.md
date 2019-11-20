@@ -1,4 +1,9 @@
 # swag
+## 1.go get -u -v github.com/Feng2012/swag
+## 2.cd $GOPATH/src/github.com/Feng2012/swag/cmd/swag
+## 3.go install
+## 4. swag init ZCY
+
 
 <img align="right" width="180px" src="https://raw.githubusercontent.com/swaggo/swag/master/assets/swaggo.png">
 
